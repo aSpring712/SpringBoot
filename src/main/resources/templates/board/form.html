@@ -20,6 +20,7 @@
     <div class="container">
         <h2>글쓰기</h2>
         <form action="" th:action="@{/board/form}" th:object="${board}" method="post">
+        <!-- 실제 작동 시 csrf 방지 위해 input type hidden 삽입됨(키 값 일치 확인) : Cross-Site Request Forgery -->
         <input type="hidden" th:field="*{id}">
             <div class="form-group">
                 <label for="title">제목</label>
